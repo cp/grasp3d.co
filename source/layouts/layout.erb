@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title><%= 'Grasp3d' %></title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <%= stylesheet_link_tag 'application' %>
+    <!-- <%= javascript_include_tag 'application' %> --!>
+  </head>
+  <body class="<%= page_classes %>">
+    <div class="navbar">
+      <div class="container">
+        <%= link_to '/' do; image_tag 'name.png', class: 'logo'; end %>
+        <div class="social">
+          <%= link_to 'https://instagram.com/test', target: '_blank' do; image_tag 'instagram.png'; end %>
+          <%= link_to 'https://fb.com', target: '_blank' do; image_tag 'facebook.png'; end %>
+          <%= link_to 'https://twitter.com/grasp3d', target: '_blank' do; image_tag 'twitter.png'; end %>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <div class="container">
+      <%= yield %>
+      <div class="footer">
+        <span>Copyright 2014 Grasp3d</span>
+      </div>
+    </div>
+  </body>
+</html>

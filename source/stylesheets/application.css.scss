@@ -1,0 +1,103 @@
+// Blue color theme used throughout
+$color1: #168eda;
+
+// Mixins
+@mixin align-center() {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+body {
+  font-family: helvetica;
+  margin: 0;
+  padding: 0;
+  color: #3C3C3C;
+}
+
+p { line-height: 1.4em; }
+
+div.container {
+  @include align-center();
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 800px;
+}
+
+// Navbar
+div.navbar {
+  z-index: 100;
+  display: block;
+  border-bottom: 3px solid $color1;
+  margin-bottom: 25px;
+
+  img.logo {
+    height: 40px;
+    padding-top: 10px;
+  }
+  h1 {
+    float: left;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 10px 10px 10px 0px;
+  }
+  div.social {
+    float: right;
+    padding-top: 3px;
+    img {
+      height: 50px;
+    }
+  }
+}
+
+h2.subheader {
+  text-align: center;
+}
+
+div.about p {
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+}
+
+div.video iframe {
+  @include align-center();
+}
+
+// Twitter widget
+#twitter-widget-0 {
+  width: 800px!important;
+}
+
+// Contact form
+div.cta {
+  form {
+    @include align-center();
+    max-width: 400px;
+  }
+  input {
+    width: 400px;
+    padding: 5px;
+  }
+  .pure-control-group {
+    margin-bottom: 10px;
+  }
+  button {
+    width: 400px;
+  }
+}
+
+p.thanks {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+// Footer
+div.footer {
+  margin-bottom: 50px;
+  margin-top: 25px;
+  border-top: 3px solid $color1;
+  padding-top: 10px;
+  color: #808080;
+}
